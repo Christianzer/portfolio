@@ -23,7 +23,7 @@ const I18N = {
     "contact.title":"Contact",
     "contact.lead":"Un projet, une mission ou une architecture à concevoir ? Parlons-en.",
     "contact.write":"Écrivez-moi","contact.title2":"",
-    "footer.built":"Conçu & codé avec ❤ — Vanilla JS","footer.top":"Haut ↑",
+    "footer.top":"Haut ↑",
     "filters.all":"Tous"
   },
   en: {
@@ -49,7 +49,7 @@ const I18N = {
     "contact.title":"Contact",
     "contact.lead":"Got a project, a mission or an architecture to design? Let's talk.",
     "contact.write":"Write to me",
-    "footer.built":"Designed & coded with ❤ — Vanilla JS","footer.top":"Top ↑",
+    "footer.top":"Top ↑",
     "filters.all":"All"
   }
 };
