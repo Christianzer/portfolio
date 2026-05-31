@@ -155,8 +155,8 @@ main,.nav,.footer{position:relative;z-index:5}
 @keyframes blink{50%{opacity:.25}}
 .hero-main{display:grid;grid-template-columns:1.55fr 1fr;gap:44px;align-items:end}
 .hero-head h1{font-family:var(--ff-display);font-weight:800;line-height:.86;letter-spacing:-.02em;
-  font-size:clamp(46px,11vw,150px);text-transform:uppercase}
-.hero-head h1 span{display:block}
+  font-size:clamp(40px,8vw,112px);text-transform:uppercase;max-width:100%}
+.hero-head h1 span{display:block;overflow-wrap:break-word}
 .hl-2{margin-left:.08em}
 .hl-3{color:transparent;-webkit-text-stroke:1.6px var(--accent);text-stroke:1.6px var(--accent);
   filter:drop-shadow(0 0 26px var(--glow))}
