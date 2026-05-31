@@ -1,0 +1,17 @@
+# OS / système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs / temporaires
+*.log
+*.tmp
+~$*
+
+# Dépendances (au cas où)
+node_modules/

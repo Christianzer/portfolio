@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Christian De Pacques AKA — Architecte Logiciel & Développeur Full Stack</title>
+<meta name="description" content="Portfolio de Christian De Pacques AKA — Ingénieur MIAGE, Architecte Logiciel & Développeur Full Stack. Microservices, API RESTful, Vue/Nuxt, NestJS, Laravel, Flutter." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- ===================== SPLASH (PLOTTER DRAW) ===================== -->
+<div id="splash" aria-hidden="true">
+  <div class="sp-corner tl"></div><div class="sp-corner tr"></div>
+  <div class="sp-corner bl"></div><div class="sp-corner br"></div>
+  <svg class="sp-draw" viewBox="0 0 640 220" aria-hidden="true">
+    <line class="sp-cross" x1="320" y1="0" x2="320" y2="220"/>
+    <line class="sp-cross" x1="0" y1="110" x2="640" y2="110"/>
+    <text x="320" y="150" text-anchor="middle" class="sp-text">CDPA</text>
+  </svg>
+  <div class="sp-readout mono"><span id="splashPct">000</span>% · PLOTTING&nbsp;&nbsp;PORTFOLIO.DWG</div>
+  <div class="sp-bar"><span id="splashFill"></span></div>
+  <div class="sp-skip mono" id="splashSkip">[ ESC / SKIP ]</div>
+</div>
+
+<!-- ===================== TECHNICAL FRAME (CAD VIEWPORT) ===================== -->
+<div class="frame" aria-hidden="true">
+  <span class="fr-corner tl"></span><span class="fr-corner tr"></span>
+  <span class="fr-corner bl"></span><span class="fr-corner br"></span>
+  <span class="fr-label tl mono">C.D.P.A — PORTFOLIO</span>
+  <span class="fr-label tr mono">REV 2026.05</span>
+  <span class="fr-label bl mono">05°20′N · 04°00′W — ABIDJAN</span>
+  <span class="fr-label br mono">SHEET 01 / 01</span>
+  <span class="fr-tick t"></span><span class="fr-tick b"></span>
+  <span class="fr-tick l"></span><span class="fr-tick r"></span>
+</div>
+<div class="xhair" id="xhair" aria-hidden="true"><span class="xh-v"></span><span class="xh-h"></span></div>
+<div class="fx-grid" aria-hidden="true"></div>
+<div class="fx-noise" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a href="#hero" class="brand">
+    <svg class="brand-logo" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2.4l8.4 4.85v9.5L12 21.6 3.6 16.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/><path d="M8.5 16.2V7.8l7 8.4V7.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="brand-mark">AKA</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about"><span class="nl-i mono">01</span><span data-i18n="nav.about"></span></a>
+    <a href="#stack"><span class="nl-i mono">02</span><span data-i18n="nav.stack"></span></a>
+    <a href="#xp"><span class="nl-i mono">03</span><span data-i18n="nav.xp"></span></a>
+    <a href="#work"><span class="nl-i mono">04</span><span data-i18n="nav.work"></span></a>
+    <a href="#contact"><span class="nl-i mono">05</span><span data-i18n="nav.contact"></span></a>
+  </nav>
+  <div class="nav-actions">
+    <div class="lang-switch mono" id="langSwitch" role="group" aria-label="Language">
+      <button data-lang="fr" class="active">FR</button><span>/</span><button data-lang="en">EN</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.5" y1="4.5" x2="6.6" y2="6.6"/><line x1="17.4" y1="17.4" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.6" y2="17.4"/><line x1="17.4" y1="6.6" x2="19.5" y2="4.5"/></g></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ===================== HERO (TITLE BLOCK) ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-status mono reveal"><span class="blink"></span><span data-i18n="hero.available"></span></div>
+  <div class="hero-main">
+    <div class="hero-head">
+      <h1 class="reveal">
+        <span class="hl-1">CHRISTIAN</span>
+        <span class="hl-2">DE PACQUES</span>
+        <span class="hl-3">AKA</span>
+      </h1>
+      <div class="dimline reveal"><i></i><b class="mono">EST. 2020</b><i></i><b class="mono" data-i18n="hero.dim"></b><i></i></div>
+      <p class="hero-lead reveal" data-i18n="hero.lead"></p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#work" data-i18n="hero.cta_work"></a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta_contact"></a>
+      </div>
+    </div>
+
+    <aside class="titleblock reveal">
+      <div class="tb-head mono"><span>TITLE&nbsp;BLOCK</span><span>CDPA·2026·001</span></div>
+      <div class="tb-row"><span class="tb-k mono">NAME</span><span class="tb-v">Christian De Pacques AKA</span></div>
+      <div class="tb-row"><span class="tb-k mono">ROLE</span><span class="tb-v" data-i18n="hero.role"></span></div>
+      <div class="tb-row"><span class="tb-k mono">STACK</span><span class="tb-v">NestJS · Vue/Nuxt · Laravel · Flutter</span></div>
+      <div class="tb-row"><span class="tb-k mono">METHOD</span><span class="tb-v">UML · MERISE · Microservices</span></div>
+      <div class="tb-row"><span class="tb-k mono">LOC</span><span class="tb-v">Abidjan — Côte d'Ivoire</span></div>
+      <div class="tb-row"><span class="tb-k mono">SCALE</span><span class="tb-v">1:1 — FULL STACK</span></div>
+    </aside>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>NestJS</span><i>/</i><span>Vue 3</span><i>/</i><span>Nuxt</span><i>/</i><span>Laravel</span><i>/</i><span>Flutter</span><i>/</i><span>TypeScript</span><i>/</i><span>PostgreSQL</span><i>/</i><span>Microservices</span><i>/</i><span>API RESTful</span><i>/</i><span>CI&nbsp;CD</span><i>/</i><span>UML</span><i>/</i><span>MERISE</span><i>/</i>
+      <span>NestJS</span><i>/</i><span>Vue 3</span><i>/</i><span>Nuxt</span><i>/</i><span>Laravel</span><i>/</i><span>Flutter</span><i>/</i><span>TypeScript</span><i>/</i><span>PostgreSQL</span><i>/</i><span>Microservices</span><i>/</i><span>API RESTful</span><i>/</i><span>CI&nbsp;CD</span><i>/</i><span>UML</span><i>/</i><span>MERISE</span><i>/</i>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS (READOUT) ===================== -->
+<section class="stats">
+  <div class="readout reveal"><span class="ro-v"><span class="num" data-count="6">0</span><i>+</i></span><span class="ro-k mono" data-i18n="stats.years"></span></div>
+  <div class="readout reveal"><span class="ro-v"><span class="num" data-count="16">0</span><i>+</i></span><span class="ro-k mono" data-i18n="stats.projects"></span></div>
+  <div class="readout reveal"><span class="ro-v"><span class="num" data-count="5">0</span></span><span class="ro-k mono" data-i18n="stats.sectors"></span></div>
+  <div class="readout reveal"><span class="ro-v">01 <i>🏆</i></span><span class="ro-k mono" data-i18n="stats.award"></span></div>
+</section>
+
+<!-- ===================== ABOUT §01 ===================== -->
+<section class="section" id="about">
+  <div class="sec-head reveal"><span class="sec-no mono">§01</span><h2 class="sec-title" data-i18n="about.title"></h2><span class="leader" aria-hidden="true"></span><span class="sec-meta mono">ABOUT</span></div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+      <a class="award-chip" href="https://www.digital-mag.ci/hackathon-de-cinetpay-miage-gi-fhb-remporte-le-grand-prix/" target="_blank" rel="noopener">
+        <span class="mono">[ 🏆 ]</span><span data-i18n="about.award"></span><span class="arr">↗</span>
+      </a>
+    </div>
+    <ul class="about-facts reveal">
+      <li><span class="mono k" data-i18n="about.f_role"></span><span class="v">Software Architect</span></li>
+      <li><span class="mono k" data-i18n="about.f_edu"></span><span class="v">MIAGE — Ingénieur (BAC+5)</span></li>
+      <li><span class="mono k" data-i18n="about.f_loc"></span><span class="v">Cocody, Abidjan — CI</span></li>
+      <li><span class="mono k" data-i18n="about.f_lang"></span><span class="v" data-i18n="about.f_lang_v"></span></li>
+      <li><span class="mono k" data-i18n="about.f_avail"></span><span class="v ok" data-i18n="about.f_avail_v"></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== STACK §02 (BOM TABLE) ===================== -->
+<section class="section" id="stack">
+  <div class="sec-head reveal"><span class="sec-no mono">§02</span><h2 class="sec-title" data-i18n="stack.title"></h2><span class="leader" aria-hidden="true"></span><span class="sec-meta mono">BILL OF MATERIALS</span></div>
+  <div class="bom-wrap reveal">
+    <table class="bom">
+      <thead><tr><th class="mono">#</th><th class="mono" data-i18n="bom.cat"></th><th class="mono" data-i18n="bom.items"></th></tr></thead>
+      <tbody id="bomBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE §03 ===================== -->
+<section class="section" id="xp">
+  <div class="sec-head reveal"><span class="sec-no mono">§03</span><h2 class="sec-title" data-i18n="xp.title"></h2><span class="leader" aria-hidden="true"></span><span class="sec-meta mono">SECTION ELEVATION</span></div>
+  <div class="timeline" id="timeline"></div>
+  <div class="edu-block">
+    <h3 class="edu-h mono" data-i18n="edu.title"></h3>
+    <div class="edu-grid" id="eduGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== WORK §04 (SHEETS) ===================== -->
+<section class="section" id="work">
+  <div class="sec-head reveal"><span class="sec-no mono">§04</span><h2 class="sec-title" data-i18n="work.title"></h2><span class="leader" aria-hidden="true"></span><span class="sec-meta mono">DRAWING SHEETS</span></div>
+  <p class="sec-sub reveal" data-i18n="work.sub"></p>
+  <div class="filters reveal" id="filters"></div>
+  <div class="work-grid" id="workGrid"></div>
+</section>
+
+<!-- ===================== CONTACT §05 ===================== -->
+<section class="section contact" id="contact">
+  <div class="sec-head reveal"><span class="sec-no mono">§05</span><h2 class="sec-title" data-i18n="contact.title"></h2><span class="leader" aria-hidden="true"></span><span class="sec-meta mono">SIGN-OFF</span></div>
+  <div class="contact-wrap">
+    <div class="contact-left reveal">
+      <p class="contact-lead" data-i18n="contact.lead"></p>
+      <a class="mail-cta" href="mailto:christianaka65@gmail.com">
+        <span class="mono" data-i18n="contact.write"></span>
+        <strong>christianaka65@gmail.com</strong>
+        <span class="arr">→</span>
+      </a>
+    </div>
+    <div class="contact-right reveal">
+      <a class="link-row" href="tel:+2250143148561"><span class="mono k">TEL</span><span class="v">+225 0143 14 85 61</span></a>
+      <a class="link-row" href="https://github.com/Christianzer" target="_blank" rel="noopener"><span class="mono k">GITHUB</span><span class="v">@Christianzer <i class="arr">↗</i></span></a>
+      <a class="link-row" href="https://www.linkedin.com/in/christian-aka" target="_blank" rel="noopener"><span class="mono k">LINKEDIN</span><span class="v">@christian aka <i class="arr">↗</i></span></a>
+      <div class="link-row"><span class="mono k">LOC</span><span class="v">Cocody, Abidjan — CI</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span class="mono">© <span id="year"></span> CHRISTIAN DE PACQUES AKA</span>
+  <span class="mono foot-built" data-i18n="footer.built"></span>
+  <a href="#hero" class="mono foot-top" data-i18n="footer.top"></a>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
