@@ -291,6 +291,11 @@ main,.nav,.footer{position:relative;z-index:5}
 .sheet h3{font-family:var(--ff-display);font-size:clamp(20px,2.6vw,28px);font-weight:700;color:var(--ink);line-height:1.05;margin-bottom:7px}
 .sheet .stype{font-family:var(--ff-mono);font-size:11.5px;color:var(--accent-2);margin-bottom:13px}
 .sheet p{font-size:14px;color:var(--ink-soft);font-weight:300;margin-bottom:16px;flex:1}
+.sheet-link{display:inline-flex;align-items:center;align-self:flex-start;gap:2px;margin-bottom:18px;
+  font-family:var(--ff-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;border:1px solid var(--line-strong);border-radius:2px;
+  padding:7px 12px;transition:.25s var(--ease)}
+.sheet-link:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
 .sheet-specs{border-top:1px dashed var(--line-strong);margin-top:auto;padding:13px 22px;
   font-family:var(--ff-mono);font-size:11px;color:var(--ink-mute);letter-spacing:.02em;line-height:1.7}
 .sheet-specs b{color:var(--accent);letter-spacing:.08em}

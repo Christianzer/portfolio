@@ -80,12 +80,21 @@
   }
 
   /* ---------- PROJECTS (SHEETS) ---------- */
+  function linkLabel(url) {
+    if (/play\.google\.com/.test(url)) return "Google Play";
+    if (/apps\.apple\.com|itunes\.apple/.test(url)) return "App Store";
+    return t("work.visit");
+  }
   function renderProjects() {
     const wrap = $("#workGrid"); if (!wrap) return;
     const list = PROJECTS.filter(p => activeFilter === "all" || p.cat === activeFilter);
     wrap.innerHTML = list.map((p, i) => {
       const id = "P-" + pad2(i + 1);
       const cat = (p.catLabel && p.catLabel[lang]) || p.cat;
+      const link = p.link ? `
+          <a class="sheet-link mono" href="${p.link}" target="_blank" rel="noopener noreferrer">
+            <span>${linkLabel(p.link)}</span>&nbsp;↗
+          </a>` : "";
       return `
       <article class="sheet reveal" data-cat="${p.cat}">
         <div class="sheet-img">
@@ -97,7 +106,7 @@
           <div class="sheet-id mono"><span>${id}</span>/<span class="cat">${cat}</span></div>
           <h3>${p.name}</h3>
           <div class="stype">${p.type[lang]}</div>
-          <p>${p.desc[lang]}</p>
+          <p>${p.desc[lang]}</p>${link}
         </div>
         <div class="sheet-specs"><b>STACK</b> &nbsp;${p.tags.join("  ·  ")}</div>
       </article>`;

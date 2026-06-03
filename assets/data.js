@@ -108,11 +108,28 @@ const PROJECTS = [
           en:"Financial-management ERP: client tracking, transactions and field-agent operations. A single Vue/Quasar codebase shipped as web and Android app, backed by a secure Laravel API."},
     tags:["Laravel 8","Vue 3","Quasar","Capacitor","MySQL"] },
 
+  { id:"smaster", cat:"fintech", flag:true, catLabel:{fr:"Fintech / ERP",en:"Fintech / ERP"},
+    name:"Succès Master",
+    type:{fr:"ERP de collecte financière · API Laravel + App agents",en:"Field-collection ERP · Laravel API + agents app"},
+    desc:{fr:"ERP de collecte financière sur le terrain : suivi des clients, transactions (encaissements / décaissements) et bordereaux, avec application mobile pour agents (Quasar/Capacitor) — géolocalisation temps réel, notifications push Firebase, messagerie, challenges & gamification (classements, bonus par créneaux) et exports PDF/Excel.",
+          en:"Field cash-collection ERP: client tracking, transactions (cash-in / cash-out) and deposit slips, with a Quasar/Capacitor mobile app for agents — real-time geolocation, Firebase push notifications, messaging, challenges & gamification (rankings, time-slot bonuses) and PDF/Excel exports."},
+    link:"https://succesemaster.com",
+    tags:["Laravel 8","Quasar","Vue 3","Firebase","Sanctum"] },
+
+  { id:"moyo", cat:"fintech", catLabel:{fr:"Fintech / Éducation",en:"Fintech / Education"},
+    name:"MOYO",
+    type:{fr:"Super-app familiale · App mobile + API + back-office",en:"Family super-app · Mobile app + API + back-office"},
+    desc:{fr:"Super-application familiale autour de la scolarité : gestion des écoles, classes et enfants, paiement des frais scolaires, porte-monnaie & cagnotte (coffre, carte, solde), marketplace de fournitures (marchands, librairies), abonnements et reversements. App mobile Android adossée à une API Laravel (Stripe, Firebase) et un back-office Vue.",
+          en:"Family super-app built around schooling: management of schools, classes and children, school-fee payments, digital wallet & savings pot (vault, card, balance), supplies marketplace (merchants, bookshops), subscriptions and payouts. Android mobile app backed by a Laravel API (Stripe, Firebase) and a Vue back-office."},
+    link:"https://play.google.com/store/apps/details?id=com.guystephane.Moyo&hl=fr",
+    tags:["Laravel","Vue 3","Stripe","Firebase","Sanctum"] },
+
   { id:"fne", cat:"fintech", flag:true, catLabel:{fr:"Fintech",en:"Fintech"},
     name:"FNE — Facture Normalisée",
     type:{fr:"API + Web + Mobile + Desktop · Conformité DGI",en:"API + Web + Mobile + Desktop · DGI compliance"},
-    desc:{fr:"Suite de Facturation Normalisée Électronique conforme DGI : microservice NestJS de signature & transmission, intégration Sage 100 via ODBC, génération PDF (QR code, logo FNE) via Puppeteer — B2B / B2C / B2G / B2F.",
-          en:"DGI-compliant Electronic Standard Invoicing suite: NestJS signing & transmission microservice, Sage 100 integration over ODBC, PDF generation (QR code, FNE logo) via Puppeteer — B2B / B2C / B2G / B2F."},
+    desc:{fr:"Suite de Facturation Normalisée Électronique conforme DGI : microservice NestJS de signature & transmission, intégration Sage 100 via ODBC, génération PDF (QR code, logo FNE) via Puppeteer — B2B / B2C / B2G / B2F. Décliné en app mobile « Anouanzé » (certification + stock).",
+          en:"DGI-compliant Electronic Standard Invoicing suite: NestJS signing & transmission microservice, Sage 100 integration over ODBC, PDF generation (QR code, FNE logo) via Puppeteer — B2B / B2C / B2G / B2F. Shipped as the \"Anouanzé\" mobile app (certification + stock)."},
+    link:"https://anouanze.succesemaster.com/",
     tags:["NestJS","TypeScript","Puppeteer","Sage ODBC","MySQL"] },
 
   { id:"nalacare", cat:"health", flag:true, catLabel:{fr:"Santé",en:"Health"},
@@ -120,6 +137,7 @@ const PROJECTS = [
     type:{fr:"API + Back-office + Site vitrine",en:"API + Back-office + Landing"},
     desc:{fr:"Plateforme de gestion de rendez-vous médicaux axée sur l'accompagnement maternel & infantile. API NestJS (PostgreSQL/TypeORM), notifications temps réel Socket.IO, back-office Vue/Nuxt et vitrine multilingue.",
           en:"Medical-appointment platform focused on maternal & infant care. NestJS API (PostgreSQL/TypeORM), real-time Socket.IO notifications, Vue/Nuxt back-office and a multilingual landing site."},
+    link:"https://nalacare.be",
     tags:["NestJS","PostgreSQL","Socket.IO","Nuxt","JWT"] },
 
   { id:"dubass", cat:"edu", flag:true, catLabel:{fr:"Éducation",en:"Education"},
@@ -127,6 +145,7 @@ const PROJECTS = [
     type:{fr:"Plateforme web multi-établissements · dubass.edu.ci",en:"Multi-school web platform · dubass.edu.ci"},
     desc:{fr:"Gestion scolaire multi-établissements (enseignants, élèves, parents, admins) : structures de frais complexes (groupes de niveaux, remises fratrie, paiements par tranche), CI/CD GitHub Actions sur VPS Ubuntu, infra Nginx/PHP.",
           en:"Multi-school management (teachers, students, parents, admins): complex fee structures (level groups, sibling discounts, instalment payments), GitHub Actions CI/CD on Ubuntu VPS, Nginx/PHP infra."},
+    link:"https://dubass.edu.ci/",
     tags:["Laravel","Alpine.js","Tailwind","CI/CD","Nginx"] },
 
   { id:"beautelic", cat:"ecom", flag:true, catLabel:{fr:"Mobile",en:"Mobile"},
@@ -134,6 +153,7 @@ const PROJECTS = [
     type:{fr:"App mobile (client + prestataire) + API",en:"Mobile app (client + provider) + API"},
     desc:{fr:"Application de prestations de beauté à domicile : géolocalisation temps réel, réservation de services, abonnements, paiements Mobile Money (Wave, MTN, Orange), messagerie instantanée & notifications push.",
           en:"At-home beauty-services app: real-time geolocation, service booking, subscriptions, Mobile Money payments (Wave, MTN, Orange), instant messaging & push notifications."},
+    link:"https://play.google.com/store/apps/details?id=com.beautelic.app&hl=fr",
     tags:["Flutter","NestJS","Mobile Money","Socket.IO"] },
 
   { id:"mmm", cat:"fintech", flag:true, catLabel:{fr:"Fintech",en:"Fintech"},
@@ -155,7 +175,16 @@ const PROJECTS = [
     type:{fr:"PWA multi-acteurs + API",en:"Multi-role PWA + API"},
     desc:{fr:"Plateforme de livraison du dernier kilomètre (client, coursier, marchand, admin) : cycle complet pickup → livraison, abonnements et système de crédits, en PWA installable.",
           en:"Last-mile delivery platform (client, courier, merchant, admin): full pickup → delivery cycle, subscriptions and a credit system, as an installable PWA."},
+    link:"https://kolivri.store/",
     tags:["NestJS","Nuxt","PWA","Tailwind"] },
+
+  { id:"bulan", cat:"ecom", catLabel:{fr:"E-commerce",en:"E-commerce"},
+    name:"BULAN Cosmetics",
+    type:{fr:"E-commerce K-beauty · Boutique + back-office",en:"K-beauty e-commerce · Storefront + back-office"},
+    desc:{fr:"Boutique en ligne de cosmétiques coréens (K-beauty) : catalogue produits, panier et commandes, parcours d'achat soigné et back-office de gestion (catégories, produits, commandes), adossé à une API.",
+          en:"Korean-beauty (K-beauty) online cosmetics store: product catalogue, cart and orders, a polished shopping journey and a management back-office (categories, products, orders), backed by an API."},
+    link:"https://www.bulancosmetics.com/",
+    tags:["Laravel","Vue 3","Tailwind","E-commerce"] },
 
   { id:"classeia", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
     name:"Classe IA",
@@ -163,6 +192,14 @@ const PROJECTS = [
     desc:{fr:"Plateforme d'apprentissage en ligne : classes virtuelles, cours, sessions et plannings, avec espaces différenciés administrateur, enseignant et étudiant.",
           en:"Online learning platform: virtual classes, courses, sessions and schedules, with dedicated admin, teacher and student spaces."},
     tags:["NestJS","Nuxt","Vue 3"] },
+
+  { id:"syge", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
+    name:"SYGE-UFHB",
+    type:{fr:"Plateforme universitaire · Gestion des enseignements",en:"University platform · Teaching management"},
+    desc:{fr:"Système de Gestion des Enseignements de l'Université Félix Houphouët-Boigny : gestion du service scolarité, inscriptions et frais universitaires, avec espaces différenciés étudiants, enseignants et administration.",
+          en:"Teaching Management System for Félix Houphouët-Boigny University: registrar services, enrolment and tuition-fee management, with dedicated student, teacher and admin spaces."},
+    link:"https://syge-ufhb.net",
+    tags:["Laravel","Vue 3","MySQL"] },
 
   { id:"eimmo", cat:"erp", catLabel:{fr:"Immobilier",en:"Real-estate"},
     name:"e-immo",
@@ -185,11 +222,20 @@ const PROJECTS = [
           en:"Institutional web platform ciatci.com plus a BI platform (cross-filtering, drag-and-drop, drill-down) on the bdgesope database, deployed via CI/CD on an Ubuntu VPS."},
     tags:["NestJS","Nuxt 3","MySQL","Power BI","CI/CD"] },
 
+  { id:"ciatsite", cat:"erp", catLabel:{fr:"Immobilier",en:"Real-estate"},
+    name:"CIAT — ciatci.com",
+    type:{fr:"Site institutionnel · Aménagement de terrains",en:"Corporate website · Land development"},
+    desc:{fr:"Site institutionnel de la CIAT (Compagnie Internationale d'Aménagement de Terrains), acteur du Top 3 de l'immobilier en Côte d'Ivoire : présentation des programmes immobiliers et lotissements (résidentiel, ventes de terrains, achats échelonnés/groupés), services CIAT PLUS, dépôt de propositions foncières et pôle énergies renouvelables (SODEN).",
+          en:"Corporate website of CIAT (Compagnie Internationale d'Aménagement de Terrains), a Top-3 real-estate player in Côte d'Ivoire: showcase of property programs and land subdivisions (residential, land sales, instalment/group purchases), CIAT PLUS services, land-proposal submissions and a renewable-energy division (SODEN)."},
+    link:"https://ciatci.com",
+    tags:["Nuxt 3","NestJS","Tailwind","SEO","CI/CD"] },
+
   { id:"multimarket", cat:"erp", catLabel:{fr:"Desktop",en:"Desktop"},
     name:"MultiMarket",
     type:{fr:"Application desktop Windows · POS",en:"Windows desktop app · POS"},
     desc:{fr:"Logiciel de gestion commerciale et de point de vente (POS) packagé en application Windows native, distribué en version installable (v5.5.3).",
           en:"Commercial-management and point-of-sale (POS) software packaged as a native Windows app, shipped as an installable build (v5.5.3)."},
+    link:"https://multimarket.ciatci.com",
     tags:["Electron","Vue 3","Vite"] },
 
   { id:"modelis", cat:"data", catLabel:{fr:"Démo technique",en:"Tech demo"},
