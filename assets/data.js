@@ -164,6 +164,14 @@ const PROJECTS = [
     link:"https://www.bulancosmetics.com/",
     tags:["Laravel","Vue 3","Tailwind","E-commerce"] },
 
+  { id:"sbluxury", cat:"ecom", catLabel:{fr:"E-commerce",en:"E-commerce"},
+    name:"SB Luxury",
+    type:{fr:"E-commerce mode (PWA) · Boutique + back-office + essayage IA",en:"Fashion e-commerce (PWA) · Storefront + back-office + AI try-on"},
+    desc:{fr:"Boutique e-commerce de mode full-stack Nuxt 3 : catalogue & collections, panier, wishlist, checkout, suivi de commande, avis et newsletter, avec essayage virtuel par IA (Replicate). Back-office complet (produits, stocks, catégories, promotions, publicités, CMS, tableau de bord) en PWA installable.",
+          en:"Full-stack Nuxt 3 fashion e-commerce store: catalogue & collections, cart, wishlist, checkout, order tracking, reviews and newsletter, with AI-powered virtual try-on (Replicate). Complete back-office (products, stock, categories, promotions, ads, CMS, dashboard) as an installable PWA."},
+    link:"http://82.25.117.63:3001",
+    tags:["Nuxt 3","Pinia","Tailwind","SQLite","Replicate IA","PWA"] },
+
   { id:"syge", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
     name:"SYGE-UFHB",
     type:{fr:"Plateforme universitaire · Gestion des enseignements",en:"University platform · Teaching management"},
