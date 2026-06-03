@@ -163,13 +163,6 @@ const PROJECTS = [
           en:"Mobile Money operator platform: cash/e-value distribution, agent management, commissions and dynamic reports, with data security and operation auditing."},
     tags:["Architecture","API REST","Mobile","BI"] },
 
-  { id:"qiryna", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
-    name:"Qiryna",
-    type:{fr:"Web (client + back-office) + API",en:"Web (client + back-office) + API"},
-    desc:{fr:"Plateforme « Étudier à l'étranger » : profilage étudiant, catalogue d'écoles & MBA, coaching, prise de rendez-vous, paiement en ligne et suivi des commandes.",
-          en:"\"Study abroad\" platform: student profiling, school & MBA catalogue, coaching, meeting booking, online payment and order tracking."},
-    tags:["Laravel","Vue 3","Vite","Tailwind"] },
-
   { id:"kolivri", cat:"ecom", catLabel:{fr:"Logistique",en:"Logistics"},
     name:"Kolivri",
     type:{fr:"PWA multi-acteurs + API",en:"Multi-role PWA + API"},
