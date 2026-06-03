@@ -97,17 +97,9 @@ const CATEGORIES = [
   { key:"edu",     label:{fr:"Éducation",en:"Education"} },
   { key:"health",  label:{fr:"Santé",en:"Health"} },
   { key:"ecom",    label:{fr:"E-commerce / Mobile",en:"E-commerce / Mobile"} },
-  { key:"data",    label:{fr:"Data / BI",en:"Data / BI"} },
 ];
 
 const PROJECTS = [
-  { id:"khadim", cat:"erp", flag:true, catLabel:{fr:"Gestion / ERP",en:"ERP"},
-    name:"Khadim (Master)",
-    type:{fr:"Web + Mobile Android",en:"Web + Android Mobile"},
-    desc:{fr:"ERP de gestion financière : suivi clients, transactions et opérations d'agents de terrain. Une seule base Vue/Quasar déployée en web et mobile Android, adossée à une API Laravel sécurisée.",
-          en:"Financial-management ERP: client tracking, transactions and field-agent operations. A single Vue/Quasar codebase shipped as web and Android app, backed by a secure Laravel API."},
-    tags:["Laravel 8","Vue 3","Quasar","Capacitor","MySQL"] },
-
   { id:"smaster", cat:"fintech", flag:true, catLabel:{fr:"Fintech / ERP",en:"Fintech / ERP"},
     name:"Succès Master",
     type:{fr:"ERP de collecte financière · API Laravel + App agents",en:"Field-collection ERP · Laravel API + agents app"},
@@ -156,13 +148,6 @@ const PROJECTS = [
     link:"https://play.google.com/store/apps/details?id=com.beautelic.app&hl=fr",
     tags:["Flutter","NestJS","Mobile Money","Socket.IO"] },
 
-  { id:"mmm", cat:"fintech", flag:true, catLabel:{fr:"Fintech",en:"Fintech"},
-    name:"Mobile Money Master",
-    type:{fr:"Plateforme financière + App agents",en:"Financial platform + Agents app"},
-    desc:{fr:"Plateforme d'opérateur Mobile Money : distribution de cash/UV, gestion des agents, commissions et rapports dynamiques, avec sécurisation des données et audit des opérations.",
-          en:"Mobile Money operator platform: cash/e-value distribution, agent management, commissions and dynamic reports, with data security and operation auditing."},
-    tags:["Architecture","API REST","Mobile","BI"] },
-
   { id:"kolivri", cat:"ecom", catLabel:{fr:"Logistique",en:"Logistics"},
     name:"Kolivri",
     type:{fr:"PWA multi-acteurs + API",en:"Multi-role PWA + API"},
@@ -178,13 +163,6 @@ const PROJECTS = [
           en:"Korean-beauty (K-beauty) online cosmetics store: product catalogue, cart and orders, a polished shopping journey and a management back-office (categories, products, orders), backed by an API."},
     link:"https://www.bulancosmetics.com/",
     tags:["Laravel","Vue 3","Tailwind","E-commerce"] },
-
-  { id:"classeia", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
-    name:"Classe IA",
-    type:{fr:"Web · e-learning (API + frontend)",en:"Web · e-learning (API + frontend)"},
-    desc:{fr:"Plateforme d'apprentissage en ligne : classes virtuelles, cours, sessions et plannings, avec espaces différenciés administrateur, enseignant et étudiant.",
-          en:"Online learning platform: virtual classes, courses, sessions and schedules, with dedicated admin, teacher and student spaces."},
-    tags:["NestJS","Nuxt","Vue 3"] },
 
   { id:"syge", cat:"edu", catLabel:{fr:"Éducation",en:"Education"},
     name:"SYGE-UFHB",
@@ -208,13 +186,6 @@ const PROJECTS = [
           en:"Commercial management of real-estate programs: prospecting → reservation → contract → handover, cancellations, plot mapping and sales curves."},
     tags:["Laravel","MySQL","BI"] },
 
-  { id:"ciat", cat:"data", catLabel:{fr:"Data / BI",en:"Data / BI"},
-    name:"ciatci.com + BI",
-    type:{fr:"Plateforme institutionnelle + Business Intelligence",en:"Institutional platform + Business Intelligence"},
-    desc:{fr:"Plateforme web institutionnelle ciatci.com et plateforme BI (cross-filtering, drag-and-drop, drill-down) sur la base bdgesope, déployées via CI/CD sur VPS Ubuntu.",
-          en:"Institutional web platform ciatci.com plus a BI platform (cross-filtering, drag-and-drop, drill-down) on the bdgesope database, deployed via CI/CD on an Ubuntu VPS."},
-    tags:["NestJS","Nuxt 3","MySQL","Power BI","CI/CD"] },
-
   { id:"ciatsite", cat:"erp", catLabel:{fr:"Immobilier",en:"Real-estate"},
     name:"CIAT — ciatci.com",
     type:{fr:"Site institutionnel · Aménagement de terrains",en:"Corporate website · Land development"},
@@ -231,10 +202,4 @@ const PROJECTS = [
     link:"https://multimarket.ciatci.com",
     tags:["Electron","Vue 3","Vite"] },
 
-  { id:"modelis", cat:"data", catLabel:{fr:"Démo technique",en:"Tech demo"},
-    name:"Modelis Tech",
-    type:{fr:"Web cartographique (test technique)",en:"Geospatial web app (tech test)"},
-    desc:{fr:"Cartographie de points d'intérêt géolocalisés : carte interactive Leaflet, CRUD, filtrage par catégorie/recherche et requêtes spatiales (points dans une zone), interface responsive.",
-          en:"Geolocated points-of-interest mapping: interactive Leaflet map, CRUD, category/search filtering and spatial queries (points within an area), responsive UI."},
-    tags:["NestJS","Vue 3","Leaflet","Geospatial"] },
 ];
